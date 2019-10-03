@@ -1,0 +1,87 @@
+body {
+  background-image: url("images/img01.jpg");
+  background-repeat: repeat-x;
+}
+
+#calendar table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#calendar th, #calendar td {
+  padding: 5px;
+  text-align: left;
+}
+.container {
+  display: grid;
+  grid-template-columns: [left-space] 5% [left-col] 30% [body-col] 60% [right-space] 5%;
+  grid-template-rows: [page-start] 20px [header-space] auto [body-space] auto [footer-space] 15px [page-end] 20px;
+}
+
+.container header {
+  grid-column-start: left-col;
+  grid-column-end: right-space;
+  grid-row: header-space;
+}
+
+.head-links {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  background-image: url("images/img02.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.head-links ul {
+  padding-left: 0;
+  grid-column: 1;
+}
+
+.head-links ul li {
+  display: inline;
+  padding-right: 10px;
+}
+
+.head-links li:before {
+  content: url("images/img06.gif");
+  padding-right: 5px;
+}
+
+.head-links a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.head-links form {
+  align-self: center;
+  justify-content: right;
+  grid-column: 2;
+}
+
+.head-logo {
+  background-image: url("images/img03.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* margin-left: 30px; */
+  color: white;
+}
+
+.head-logo div {
+  padding-left: 150px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  /* height: 230px; */
+}
+
+.head-logo div h1 {
+  font-family: serif;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.left-column {
+  grid-column: left-col;
+  grid-row: body-space;
+}
