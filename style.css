@@ -13,7 +13,7 @@ body {
 }
 .container {
   display: grid;
-  grid-template-columns: [left-space] 5% [left-col] 30% [body-col] 60% [right-space] 5%;
+  grid-template-columns: [left-space] 5% [left-col] 280px [body-col] auto [right-space] 5%;
   grid-template-rows: [page-start] 20px [header-space] auto [body-space] auto [footer-space] 15px [page-end] 20px;
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 .head-logo div {
-  padding-left: 150px;
+  padding-left: 20%;
   padding-top: 75px;
   padding-bottom: 75px;
   /* height: 230px; */
@@ -84,4 +84,18 @@ body {
 .left-column {
   grid-column: left-col;
   grid-row: body-space;
+}
+
+.left-column div h1 {
+
+    background-image: url("images/img04.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    padding-left: 30px;
+    padding-top: 9px;
+    height: 14px;
+    font-size: larger;
+    background-size: 100% 40px;
+    padding-bottom: 17px;
+
 }
