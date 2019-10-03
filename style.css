@@ -1,26 +1,25 @@
 body {
   background-image: url("images/img01.jpg");
   background-repeat: repeat-x;
+  font-family: sans-serif;
 }
 
-#calendar table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+body a:link {
+  color: black;
 }
-#calendar th, #calendar td {
-  padding: 5px;
-  text-align: left;
-}
+
 .container {
   display: grid;
-  grid-template-columns: [left-space] 5% [left-col] 280px [body-col] auto [right-space] 5%;
-  grid-template-rows: [page-start] 20px [header-space] auto [body-space] auto [footer-space] 15px [page-end] 20px;
+  grid-template-columns: [left-space] 15% [left-col] 290px [body-col] auto [right-space] 15%;
+  grid-template-rows: [page-start] 40px [header-space] auto [body-space] auto [footer-space] 61px [page-end] 20px;
 }
 
 .container header {
   grid-column-start: left-col;
   grid-column-end: right-space;
   grid-row: header-space;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .head-links {
@@ -69,33 +68,110 @@ body {
 }
 
 .head-logo div {
-  padding-left: 20%;
+  padding-left: 230px;
   padding-top: 75px;
   padding-bottom: 75px;
   /* height: 230px; */
 }
 
 .head-logo div h1 {
+  font-size: 32pt;
   font-family: serif;
   font-style: normal;
   font-weight: lighter;
+  margin: 0;
 }
 
 .left-column {
   grid-column: left-col;
   grid-row: body-space;
+  margin-right: 10px;
 }
 
 .left-column div h1 {
+  background-image: url("images/img04.jpg");
+  background-repeat: no-repeat;
+  color: white;
+  padding-left: 40px;
+  padding-top: 9px;
+  height: 14px;
+  font-size: larger;
+  background-size: 100% 40px;
+  padding-bottom: 17px;
+}
 
-    background-image: url("images/img04.jpg");
-    background-repeat: no-repeat;
-    color: white;
-    padding-left: 30px;
-    padding-top: 9px;
-    height: 14px;
-    font-size: larger;
-    background-size: 100% 40px;
-    padding-bottom: 17px;
+.left-column div p {
+  text-align: justify;
+  color: silver;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: small;
+}
 
+#calendar table {
+  width: 100%;
+  color: silver;
+  font-size: small;
+}
+
+#calendar table, th, td {
+  border: 1px solid #F6F6F6;
+  border-collapse: collapse;
+}
+
+#calendar th, #calendar td {
+  padding: 5px;
+  text-align: center;
+}
+
+#calendar th {
+  background-color: #F6F2EF;
+}
+
+#calendar .current-day {
+  background-color: #E5F1E0;
+}
+
+#calendar caption {
+  font-size: small;
+  font-family: sans-serif;
+}
+
+#calendar .navigation {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  width: 280px;
+  font-size: x-small;
+}
+
+#calendar .navigation a:first-child:link {
+  text-align: left;
+  grid-column: 1;
+}
+
+#calendar .navigation a:last-child:link {
+  text-align: right;
+  grid-column: 2;
+}
+
+.container footer {
+  grid-column-start: left-col;
+  grid-column-end: right-space;
+  grid-row: footer-space;
+  background-image: url("images/img07.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 61px;
+  line-height: 30px;
+}
+
+footer p {
+  color: white;
+  font-size: small;
+  text-align: center;
+}
+
+footer p a:link {
+  color: #FFAF41;
 }
