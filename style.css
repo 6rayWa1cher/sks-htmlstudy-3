@@ -1,35 +1,230 @@
-.main{
+body {
+  background-image: url("images/img01.jpg");
+  background-repeat: repeat-x;
+  font-family: sans-serif;
+}
+
+body a:link {
+  color: black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [left-space] 15% [left-col] 290px [body-col] auto [right-space] 15%;
+  grid-template-rows: [page-start] 40px [header-space] auto [body-space] auto [footer-space] 61px [page-end] 20px;
+}
+
+.container header {
+  grid-column-start: left-col;
+  grid-column-end: right-space;
+  grid-row: header-space;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.head-links {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  background-image: url("images/img02.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.head-links ul {
+  padding-left: 0;
+  grid-column: 1;
+}
+
+.head-links ul li {
+  display: inline;
+  padding-right: 10px;
+}
+
+.head-links li:before {
+  content: url("images/img06.gif");
+  padding-right: 5px;
+}
+
+.head-links a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.head-links form {
+  align-self: center;
+  justify-content: right;
+  grid-column: 2;
+}
+
+.head-logo {
+  background-image: url("images/img03.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* margin-left: 30px; */
+  color: white;
+}
+
+.head-logo div {
+  padding-left: 230px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  /* height: 230px; */
+}
+
+.head-logo div h1 {
+  font-size: 32pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.left-column {
+  grid-column: left-col;
+  grid-row: body-space;
+  margin-right: 10px;
+}
+
+.left-column div h1 {
+  background-image: url("images/img04.jpg");
+  background-repeat: no-repeat;
+  color: white;
+  padding-left: 40px;
+  padding-top: 9px;
+  height: 14px;
+  font-size: larger;
+  background-size: 100% 40px;
+  padding-bottom: 17px;
+}
+
+.left-column div p {
+  text-align: justify;
+  color: silver;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: small;
+}
+
+#calendar table {
+  width: 100%;
+  color: silver;
+  font-size: small;
+}
+
+#calendar table, th, td {
+  border: 1px solid #F6F6F6;
+  border-collapse: collapse;
+}
+
+#calendar th, #calendar td {
+  padding: 5px;
+  text-align: center;
+}
+
+#calendar th {
+  background-color: #F6F2EF;
+}
+
+#calendar .current-day {
+  background-color: #E5F1E0;
+}
+
+#calendar caption {
+  font-size: small;
+  font-family: sans-serif;
+}
+
+#calendar .navigation {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  width: 280px;
+  font-size: x-small;
+}
+
+#calendar .navigation a:first-child:link {
+  text-align: left;
+  grid-column: 1;
+}
+
+#calendar .navigation a:last-child:link {
+  text-align: right;
+  grid-column: 2;
+}
+
+.container footer {
+  grid-column-start: left-col;
+  grid-column-end: right-space;
+  grid-row: footer-space;
+  background-image: url("images/img07.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 61px;
+  line-height: 30px;
+}
+
+footer p {
+  color: white;
+  font-size: small;
+  text-align: center;
+}
+
+footer p a:link {
+  color: #FFAF41;
+}
+
+.main-block{
+  grid-column-start: body-col;
+  grid-column-end: right-space;
+  grid-row: body-space;
+  padding-top: 13px;
 
 }
 
 .main-block-head{
-	background-image: url(images/img05.jpg);
-	background-repeat: no-repeat;
-	width: 600px;
-	height: 40px;
-	font-size: 20px;
+  background-image: url(images/img05.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 40px;
+  font-size: 20px;
+  line-height: 2;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+}
+
+.main-block-head td{
+  border: none;
 }
 
 .main-block-date{
-	text-align: right;
-	color: lightgray;
+  width: 30%;
+  grid-column: 2;
+  justify-content: right;
+  align-self: center;
+  color: lightgray;
+  margin-right: 20px;
 }
 
 .main-block-name{
-	padding-left: 40px;
-	color: white;
+  grid-column: 1;
+  width: 70%;
+  padding-left: 7%;
+  align-self: center;
+  color: white;
 }
 
-.main p{
-	width: 570px;
-	padding-left: 20px;
-	color: darkgray;
-	font-family: Calibri, serif;
-	line-height: 2;
-	font-size: 12px;
+.main-block p{
+  padding-left: 20px;
+  padding-right: 20px;
+  color: darkgray;
+  font-family: Calibri, serif;
+  line-height: 2;
+  font-size: 12px;
 }
 
-.main a{
-	color: black;
+.main-block a{
+  color: black;
 }
-
