@@ -4,7 +4,7 @@ body {
   font-family: sans-serif;
 }
 
-body a:link {
+body a:link, body a:visited {
   color: black;
 }
 
@@ -48,7 +48,7 @@ body a:link {
   padding-right: 5px;
 }
 
-.head-links a:link {
+.head-links a:link, .head-links a:visited {
   text-decoration: none;
   color: white;
 }
@@ -145,12 +145,12 @@ body a:link {
   font-size: x-small;
 }
 
-#calendar .navigation a:first-child:link {
+#calendar .navigation a:first-child {
   text-align: left;
   grid-column: 1;
 }
 
-#calendar .navigation a:last-child:link {
+#calendar .navigation a:last-child {
   text-align: right;
   grid-column: 2;
 }
@@ -172,7 +172,7 @@ footer p {
   text-align: center;
 }
 
-footer p a:link {
+footer p a:link, footer p a:visited {
   color: #FFAF41;
 }
 
