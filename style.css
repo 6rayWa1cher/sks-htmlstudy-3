@@ -176,15 +176,14 @@ footer p a:link, footer p a:visited {
   color: #FFAF41;
 }
 
-.main-block{
+.main-block {
   grid-column-start: body-col;
   grid-column-end: right-space;
   grid-row: body-space;
   padding-top: 13px;
-
 }
 
-.main-block-head{
+.main-block-head {
   background-image: url(images/img05.jpg);
   background-repeat: no-repeat;
   background-size: 100% 40px;
@@ -195,11 +194,11 @@ footer p a:link, footer p a:visited {
   grid-template-rows: 1fr;
 }
 
-.main-block-head td{
+.main-block-head td {
   border: none;
 }
 
-.main-block-date{
+.main-block-date {
   width: 30%;
   grid-column: 2;
   justify-content: right;
@@ -208,7 +207,7 @@ footer p a:link, footer p a:visited {
   margin-right: 20px;
 }
 
-.main-block-name{
+.main-block-name {
   grid-column: 1;
   width: 70%;
   padding-left: 7%;
@@ -216,7 +215,7 @@ footer p a:link, footer p a:visited {
   color: white;
 }
 
-.main-block p{
+.main-block p {
   padding-left: 20px;
   padding-right: 20px;
   color: darkgray;
@@ -225,6 +224,15 @@ footer p a:link, footer p a:visited {
   font-size: 12px;
 }
 
-.main-block a{
+.article {
+  padding-bottom: 20px;
+}
+
+.article-bottom-links a {
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.main-block a {
   color: black;
 }
